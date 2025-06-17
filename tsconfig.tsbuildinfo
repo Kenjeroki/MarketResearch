@@ -1,0 +1,1 @@
+{"root":["./server/db.js","./server/seed.js","./server/server.js","./server/routes/categories.route.ts","./server/routes/data.js","./server/routes/research.js","./server/types/fastify.d.ts"],"errors":true,"version":"5.6.3"}
