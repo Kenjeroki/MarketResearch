@@ -27,7 +27,7 @@ await fastify.register(fastifyMongo, {
 });
 
 const dbStatus = !!fastify.mongo?.db;
-console.log("✅ MongoDB підключено:", dbStatus ? "🟢 Так" : "❌ Ні");
+console.log("MongoDB підключено:", dbStatus ? "Так" : "Ні");
 
 if (dbStatus) {
   await fastify.register(authRoutes);
@@ -38,15 +38,15 @@ if (dbStatus) {
   await fastify.register(searchRoutes);
   await fastify.register(commentRoutes);
   await fastify.register(statsRoutes);
-  console.log("📢 Зареєстровані всі маршрути");
+  console.log("Зареєстровані всі маршрути");
 } else {
-  console.warn("⚠️ Маршрути не зареєстровані через відсутність підключення до MongoDB");
+  console.warn("⚠Маршрути не зареєстровані через відсутність підключення до MongoDB");
 }
 
 const PORT = process.env.PORT || 3000;
 try {
   const address = await fastify.listen({ port: PORT });
-  console.log(`🚀 Сервер працює за адресою ${address}`);
+  console.log(`Сервер працює за адресою ${address}`);
   fastify.printRoutes();
 } catch (err) {
   fastify.log.error(err);
