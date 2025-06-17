@@ -11,7 +11,7 @@ let db;
 export async function connectToDB() {
   await client.connect();
   db = client.db(process.env.DB_NAME || "prodexplorer");
-  console.log("✅ MongoDB connected");
+  console.log("MongoDB connected");
 }
 
 export function getDB() {
